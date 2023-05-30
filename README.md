@@ -9,6 +9,8 @@ For our purposes, a `Game` has many `Result`s, a `Player` has many
 
 `Game` - `Player` is a many to many relationship.
 
+'Game' -< 'Result' >- 'Player'
+
 **Note**: You should draw your domain on paper or on a whiteboard _before you
 start coding_. Remember to identify a single source of truth for your data.
 
@@ -21,8 +23,9 @@ start coding_. Remember to identify a single source of truth for your data.
 - lists and list Methods
 
 ## Instructions
-
+`pipenv shell`
 To get started, run `pipenv install` while inside of this directory.
+`pip show ipdb`
 
 Build out all of the methods listed in the deliverables. The methods are listed
 in a suggested order, but you can feel free to tackle the ones you think are
@@ -36,6 +39,7 @@ can run `pytest` to make sure your code is functional before submitting.
 > you write new code!**
 
 We've provided you with a tool that you can use to test your code. To use it,
+'python3 lib/debug.py'
 run `python debug.py` from the command line. This will start a `ipdb` session
 with your classes defined. You can test out the methods that you write here. You
 can add code to the `debug.py` file to define variables and create sample
