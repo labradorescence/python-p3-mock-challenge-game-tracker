@@ -155,7 +155,7 @@ build out any helper methods if needed.
 
 #### Bonus: Aggregate and Association Method
 
-- `Player classmethod highest_scored(cls, game)`
+- `Player class method highest_scored(cls, game)`
   - Returns the `Player` instance with the highest average game score.
   - Returns `None` if there are no players.
   - _hint: will need a way to remember all `Player` objects_
