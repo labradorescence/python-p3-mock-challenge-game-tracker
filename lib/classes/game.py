@@ -54,4 +54,7 @@ class Game:
         pass
     
     def average_score(self, player):
-        pass
+        player_scores = [rslt. score for rslt in self._results if rslt.player == player]
+        if player_scores:
+            return sum(player_scores) / len(player_scores)
+        return 0

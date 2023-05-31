@@ -2,11 +2,13 @@ class Player:
 
     all = []
 
+    #initializer
     def __init__(self, username):
         self.username = username
         self._results = []
         self._games_played = []
 
+    #properties
     @property #getter 
     def username(self):
         return self._username #return the username property
@@ -18,6 +20,7 @@ class Player:
         else:
             raise Exception("Usernames must be strings between 2 and 16 characters, inclusive.")
         
+    ### Object Relationship Attributes and Properties
     def results(self, new_result=None):
         from classes.result import Result #1. import the result class
         if new_result and isinstance(new_result, Result): # 2. if new_result exists
@@ -36,7 +39,9 @@ class Player:
     
         # go to result class and add the games_played
         pass
-    
+
+
+    ### Aggregate and Association Methods 
     def played_game(self, game):
         # for each in self._results:
         #     if each.player == self and each.game ==game:
@@ -47,9 +52,10 @@ class Player:
         #if the player has played this game before 
 
     def num_times_played(self, game):
-        return [ each_r for each_r in self._results if each_r.game == game]
+        return len([ each_r for each_r in self._results if each_r.game == game])
         pass
     
+#### Bonus: Aggregate and Association Method
     @classmethod
     def highest_scored(cls, game): #cls == class 
         if cls.all: 
